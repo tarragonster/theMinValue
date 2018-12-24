@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    The array is <span id="theArray"></span><br>
+    The minimum value of the array is <span id="theMinVal"></span>
+
+<script>
+    var nEle = prompt("Please enter the number of elements");
+
+    a = [];
+
+    for (i = 0;i < nEle;i++){
+        a[i] = prompt("Please enter the element's value");
+
+    }
+    document.getElementById("theArray").innerHTML = a;
+    document.getElementById("theMinVal").innerHTML = theMinValue(a);
+
+    function theMinValue(b) {
+        var theMin = b[0];
+
+        for(i = 0;i < b.length; i++){
+
+            theMin = min2(theMin,b[i])
+        }
+        return theMin
+    }
+
+    function min2(x,y) {
+
+        if (x < y){
+            return x
+        }else{
+            return y
+        }
+    }
+
+</script>
+
+</body>
+</html>
